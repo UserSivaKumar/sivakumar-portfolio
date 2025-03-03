@@ -11,9 +11,11 @@
             color: white;
             text-align: center;
             padding: 20px;
+            animation: fadeIn 2s ease-in;
         }
         h1 {
             color: #58a6ff;
+            animation: slideIn 1.5s ease-in-out;
         }
         .container {
             max-width: 800px;
@@ -21,15 +23,32 @@
             padding: 20px;
             background-color: #161b22;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 2s ease-in-out;
         }
         a {
             color: #58a6ff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #1f6feb;
         }
         .section {
             margin-bottom: 20px;
             padding: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -37,7 +56,7 @@
     <div class="container">
         <h1>Sivakumar TV</h1>
         <p>Bot and Full Stack Developer | Angular, Python, MySQL</p>
-        <p>Contact: 9363209910 | <a href="#">LinkedIn</a> | <a href="#">Portfolio</a></p>
+        <p>Contact: 9363209910 | <a href="https://www.linkedin.com/in/sivakumar-tv-023142288">LinkedIn</a> | <a href="https://usersivakumar.github.io/sivakumar-portfolio">Portfolio</a></p>
         
         <div class="section">
             <h2>About Me</h2>
@@ -54,6 +73,7 @@
             <p><strong>Event Media Manager:</strong> Advanced event management platform with automation features.</p>
             <p><strong>API Bot:</strong> Built an intelligent bot for API automation.</p>
             <p><strong>E-Symposium Manager:</strong> Interactive symposium management system.</p>
+            <p><strong>Live Project:</strong> <a href="http://srishta-25.sasurieengg.com" target="_blank">Srishta-25</a></p>
         </div>
 
         <div class="section">
